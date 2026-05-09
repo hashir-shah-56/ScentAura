@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - ScentAura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="shop-page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar shop-navbar">
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">ScentAura</div>
+
+        <!-- Links -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search perfumes...">
+            <div id="search-suggestions" class="search-suggestions"></div>
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="cart">
+            <a href="cart.html" style="text-decoration: none; color: inherit;">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-badge">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="shop-header">
+        <h1>Your Shopping Cart</h1>
+    </header>
+
+    <!-- CART CONTAINER -->
+    <main class="shop-container" style="max-width: 800px;">
+        <div class="cart-wrapper">
+            <div id="cart-items" class="cart-items-list">
+                <!-- JS will populate stuff here -->
+            </div>
+
+            <div class="cart-summary">
+                <h3>Total: Rs. <span id="cart-total">0</span></h3>
+                <a href="checkout.html" style="text-decoration: none;">
+                    <button class="card-btn" style="width: 100%; margin-top: 20px; text-transform: uppercase;">
+                        Proceed to Checkout
+                    </button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2 id="about">About Us</h2>
+                <p>Luxury fragrances crafted for timeless elegance.</p>
+                <br>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Contact</h3>
+                <p>Email: info@scentaura.com</p>
+                <p>Phone: +92 300 1234567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ScentAura | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

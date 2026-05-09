@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScentAura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">☰</div>
+        <div class="logo">ScentAura</div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search perfumes...">
+            <div id="search-suggestions" class="search-suggestions"></div>
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="cart">
+            <a href="cart.html" style="text-decoration: none; color: inherit;">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-badge">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Discover Your Signature Scent</h1>
+    </section>
+
+    <!-- PRODUCT SECTIONS -->
+    <section class="product product1">
+        <div class="left">
+            <h2>Black Noir</h2>
+            <p class="price">Rs. 8500</p>
+            <button onclick="addToCart('Black Noir', 8500)">Shop Now</button>
+        </div>
+        <div class="right">
+            <p>Deep, rich fragrance crafted for bold personalities.
+                A blend of smoky oud and warm spices creates a lasting impression.
+                Perfect for evening wear and special occasions.
+                An essence that speaks confidence without words</p>
+        </div>
+    </section>
+
+    <section class="product product2">
+        <div class="left">
+            <h3>Rose Essence</h3>
+            <p class="price">Rs. 9500</p>
+            <button onclick="addToCart('Rose Essence', 9500)">Shop Now</button>
+        </div>
+        <div class="right">
+            <p>A delicate fusion of fresh roses and soft floral notes.
+                Light, graceful, and timeless in every sense.
+                Designed for those who appreciate subtle elegance.
+                A scent that lingers gently throughout the day.</p>
+        </div>
+    </section>
+
+    <section class="product product3">
+        <div class="left">
+            <h4>Midnight Musk</h4>
+            <p class="price">Rs. 10500</p>
+            <button onclick="addToCart('Midnight Musk', 10500)">Shop Now</button>
+        </div>
+        <div class="right">
+            <p>A mysterious composition of musk and dark woody accords.
+                Smooth, sensual, and deeply captivating.
+                Ideal for nights that leave a lasting memory.
+                A fragrance that defines quiet sophistication.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <h2 id="about">About Us</h2>
+                <p>Luxury fragrances crafted for timeless elegance.</p>
+                <br></br>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h3>Contact</h3>
+                <p>Email: info@scentaura.com</p>
+                <p>Phone: +92 300 1234567</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ScentAura | All Rights Reserved</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
