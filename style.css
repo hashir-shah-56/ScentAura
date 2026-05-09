@@ -164,7 +164,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
     display: none;
     z-index: 100;
@@ -175,7 +175,7 @@ body {
     padding: 10px 15px;
     cursor: pointer;
     transition: 0.3s;
-    border-bottom:solid 1px #d6cec1;
+    border-bottom: solid 1px #d6cec1;
 }
 
 .search-suggestions div:hover {
@@ -206,7 +206,7 @@ body {
 /* Different background images */
 .hero {
     height: 100vh;
-    background-image: url("../Images/mockup-free-vAQ5H6LSEWQ-unsplash.jpg");
+    background-image: url("../Front_End-1402_1403-ScentAura/Images/mockup-free-vAQ5H6LSEWQ-unsplash.jpg");
     background-size: cover;
     background-position: center;
 
@@ -333,15 +333,15 @@ h4 {
 }
 
 .product1 {
-    background-image: url("../Images/mockup-free-aFc2jaraI28-unsplash.jpg");
+    background-image: url("../Front_End-1402_1403-ScentAura/Images/mockup-free-aFc2jaraI28-unsplash.jpg");
 }
 
 .product2 {
-    background-image: url("../Images/maxim-lozyanko-qFsxwpoDIB4-unsplash.jpg");
+    background-image: url("../Front_End-1402_1403-ScentAura/Images/maxim-lozyanko-qFsxwpoDIB4-unsplash.jpg");
 }
 
 .product3 {
-    background-image: url("../Images/hamza-nouasria-Kf4gB2rslgQ-unsplash.jpg");
+    background-image: url("../Front_End-1402_1403-ScentAura/Images/hamza-nouasria-Kf4gB2rslgQ-unsplash.jpg");
 }
 
 
@@ -466,7 +466,7 @@ h4 {
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
-    
+
     border-top: 1px solid black;
     padding-top: 15px;
     font-size: 13px;
@@ -475,6 +475,53 @@ h4 {
 /* =========================================
    SHOP PAGE STYLES
    ========================================= */
+
+.toast {
+    position: fixed;
+    top: 0%;
+    left: 40%;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: translateY(-120%);
+    background-color: #ffffff;
+    color: #1f1a11;
+    padding: 20px 20px;
+    border-radius: 15px;
+    border: 1px solid #1f1a11;
+    box-shadow: #00000080 2px 4px 8px;
+    opacity: 0;
+    /*transition: opacity 0.3s ease-in-out;*/
+    z-index: 9999;
+}
+
+@keyframes toastFlow {
+
+    0% {
+        transform: translateY(-120%);
+        opacity: 0;
+    }
+
+    15% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(120%);
+        opacity: 0;
+    }
+}
+
+.toast.show {
+    animation: toastFlow 1.7s ease-in-out forwards;
+}
 
 .shop-page {
     background-color: #d6cec1;
@@ -786,7 +833,7 @@ CART PAGE STYLES
 }
 
 .checkout-grid {
-    display:grid;
+    display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
@@ -803,7 +850,7 @@ CART PAGE STYLES
 
 .checkout-form h2 {
     color: #292319;
-    font-size:30px;
+    font-size: 30px;
 }
 
 #place-order-btn {
@@ -815,20 +862,21 @@ CART PAGE STYLES
     cursor: pointer;
     transition: 0.3s;
 }
+
 #place-order-btn:hover {
     background-color: #ffffff;
     color: #12100d;
 }
 
 .checkout-summary {
-    display:grid;
+    display: grid;
     background: #1b1813;
     padding: 25px;
     border-radius: 12px;
     color: #ffffff;
 }
 
-.checkout-summary h2{
+.checkout-summary h2 {
     color: #ffffff;
     font-size: 35px;
     padding: 5px;

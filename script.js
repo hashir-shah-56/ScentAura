@@ -249,6 +249,23 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+// ===== TOAST NOTIFICATION =====
+function showToast(message) {
+
+    const toast = document.getElementById("toast");
+
+    if (!toast) return;
+
+    toast.textContent = message;
+
+    // restart animation properly
+    toast.classList.remove("show");
+
+    void toast.offsetWidth; // force reflow (important trick)
+
+    toast.classList.add("show");
+}
+
 function addToCart(name, price) {
 
     const existingItem =
@@ -270,7 +287,7 @@ function addToCart(name, price) {
     saveCart();
     updateCartCount();
 
-    alert(`${name} added to cart!`);
+    showToast(`${name} added to cart!`);
 }
 
 function updateCartCount() {
