@@ -206,7 +206,7 @@ body {
 /* Different background images */
 .hero {
     height: 100vh;
-    background-image: url("../Front_End-1402_1403-ScentAura/Images/mockup-free-vAQ5H6LSEWQ-unsplash.jpg");
+    background-image: url("../Images/mockup-free-vAQ5H6LSEWQ-unsplash.jpg");
     background-size: cover;
     background-position: center;
 
@@ -333,15 +333,15 @@ h4 {
 }
 
 .product1 {
-    background-image: url("../Front_End-1402_1403-ScentAura/Images/mockup-free-aFc2jaraI28-unsplash.jpg");
+    background-image: url("../Images/mockup-free-aFc2jaraI28-unsplash.jpg");
 }
 
 .product2 {
-    background-image: url("../Front_End-1402_1403-ScentAura/Images/maxim-lozyanko-qFsxwpoDIB4-unsplash.jpg");
+    background-image: url("../Images/maxim-lozyanko-qFsxwpoDIB4-unsplash.jpg");
 }
 
 .product3 {
-    background-image: url("../Front_End-1402_1403-ScentAura/Images/hamza-nouasria-Kf4gB2rslgQ-unsplash.jpg");
+    background-image: url("../Images/hamza-nouasria-Kf4gB2rslgQ-unsplash.jpg");
 }
 
 
