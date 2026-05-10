@@ -266,7 +266,7 @@ function showToast(message) {
     toast.classList.add("show");
 }
 
-function addToCart(name, price) {
+function addToCart(name, price, image) {
 
     const existingItem =
         cart.find(item => item.name === name);
@@ -280,6 +280,7 @@ function addToCart(name, price) {
         cart.push({
             name,
             price,
+            image,
             quantity: 1
         });
     }
@@ -353,7 +354,9 @@ function renderCart() {
 
         cartItemsContainer.innerHTML += `
             <div class="cart-item">
-
+                <div class="cart-item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                 </div>
                 <div class="cart-item-details">
                     <h4>${item.name}</h4>
                     <p>Rs. ${item.price}</p>
