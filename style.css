@@ -9,6 +9,7 @@
 
 body {
     background-color: transparent;
+    font-family: 'poppins', sans-serif;
 }
 
 .hamburger {
@@ -34,11 +35,80 @@ body {
     border-radius: 20px;
 }
 
+/* LIQUID GLASS */
+.liquid-glass {
+
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.25);
+
+    overflow: hidden;
+}
+.liquid-glass::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -50%;
+    left: -60%;
+
+    width: 200%;
+    height: 200%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 30%,
+            rgba(255,255,255,0.18),
+            transparent 70%
+        );
+
+    transform: rotate(25deg);
+
+    pointer-events: none;
+}
+.liquid-glass::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.2),
+        inset 0 -1px 1px rgba(255,255,255,0.05);
+
+    pointer-events: none;
+}
+
 .navbar {
     position: absolute;
     /* sits on top of hero */
     top: 0;
     width: 100%;
+     /*background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);*/
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2);
 
     display: flex;
     justify-content: space-between;
@@ -73,7 +143,7 @@ body {
     color: #3d3527;
     font-size: 18px;
     font-weight: bolder;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Exo 2', sans-serif;
     transition: 0.3s;
     background-color: transparent;
     padding-left: 15px;
@@ -180,7 +250,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
 
     display: none;
     z-index: 100;
@@ -222,7 +292,7 @@ body {
 /* Different background images */
 .hero {
     height: 100vh;
-    background-image: url("../Front_End-1402_1403-ScentAura/Images/mockup-free-vAQ5H6LSEWQ-unsplash.jpg");
+    background-image: url("../Images/mockup-free-vAQ5H6LSEWQ-unsplash.jpg");
     background-size: cover;
     background-position: center;
 
@@ -269,6 +339,7 @@ h1 {
 h2 {
     color: #ffffff;
     font-size: 55px;
+    font-family: 'playfair display', serif;
     text-align: left;
     vertical-align: middle;
 
@@ -278,15 +349,17 @@ h2 {
 h3 {
     color: #351710;
     font-size: 55px;
+    font-family: 'playfair display', serif;
     text-align: left;
     vertical-align: middle;
-
+    
     padding: 0px;
 }
 
 h4 {
     color: #ffffff;
     font-size: 55px;
+    font-family: 'playfair display', serif;
     text-align: left;
     vertical-align: middle;
 
@@ -298,7 +371,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     line-height: 1.6;
-    padding: 1px;
+    padding: 10px 15px 10px 15px;
     color: #ffffff;
     font-size: 20px;
     text-align: right;
@@ -312,7 +385,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     line-height: 1.6;
-    padding: 1px;
+    padding: 10px 15px 10px 15px;
     color: #351710;
     font-size: 20px;
     text-align: right;
@@ -326,7 +399,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     line-height: 1.6;
-    padding: 1px;
+    padding: 10px 15px 10px 15px;
     color: #ffffff;
     font-size: 20px;
     text-align: right;
@@ -349,15 +422,15 @@ h4 {
 }
 
 .product1 {
-    background-image: url("../Front_End-1402_1403-ScentAura/Images/mockup-free-aFc2jaraI28-unsplash.jpg");
+    background-image: url("../Images/mockup-free-aFc2jaraI28-unsplash.jpg");
 }
 
 .product2 {
-    background-image: url("../Front_End-1402_1403-ScentAura/Images/maxim-lozyanko-qFsxwpoDIB4-unsplash.jpg");
+    background-image: url("../Images/maxim-lozyanko-qFsxwpoDIB4-unsplash.jpg");
 }
 
 .product3 {
-    background-image: url("../Front_End-1402_1403-ScentAura/Images/hamza-nouasria-Kf4gB2rslgQ-unsplash.jpg");
+    background-image: url("../Images/hamza-nouasria-Kf4gB2rslgQ-unsplash.jpg");
 }
 
 
@@ -369,11 +442,20 @@ h4 {
     padding-right: 5px;
     border: white solid 2px;
     border-radius: 20px;
-    background-color: #ffffff00;
+    /*background-color: #ffffff00;*/
     color: rgb(255, 255, 255);
     cursor: pointer;
     transition: 0.3s;
     margin: 0%;
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .product2 button {
@@ -383,11 +465,20 @@ h4 {
     padding-right: 5px;
     border: #713e31 solid 2px;
     border-radius: 20px;
-    background-color: #ffffff00;
+    /*background-color: #ffffff00;*/
     color: rgb(0, 0, 0);
     cursor: pointer;
     transition: 0.3s;
     margin: 0%;
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .product3 button {
@@ -397,11 +488,20 @@ h4 {
     padding-right: 5px;
     border: white solid 2px;
     border-radius: 20px;
-    background-color: #ffffff00;
+    /*background-color: #ffffff00;*/
     color: rgb(255, 255, 255);
     cursor: pointer;
     transition: 0.3s;
     margin: 0%;
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .product1 button:hover {
@@ -501,12 +601,12 @@ h4 {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     transform: translateY(-120%);
-    background-color: #ffffff;
-    color: #1f1a11;
-    padding: 20px 20px;
+    /*background-color: #ffffff;
     border-radius: 15px;
     border: 1px solid #1f1a11;
-    box-shadow: #00000080 2px 4px 8px;
+    box-shadow: #00000080 2px 4px 8px;*/
+    color: #ffffff;
+    padding: 20px 20px;
     opacity: 0;
     /*transition: opacity 0.3s ease-in-out;*/
     z-index: 9999;
@@ -579,6 +679,7 @@ h4 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px 80px;
+    
 }
 
 .shop-grid {
@@ -673,10 +774,12 @@ CART PAGE STYLES
 
 .cart-wrapper {
     display:block;
-    /*background-color: #1b1813;*/
-    /*border-radius: 12px;*/
+    background-color: #1b1813;
+    border-radius: 12px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2);
     padding: 30px;
-    /*border: 1px solid #2a251c;*/
+    border: 1px solid #afa99f;
     margin-top: 20px;
 }
 
@@ -970,7 +1073,7 @@ CART PAGE STYLES
 
     .navbar {
         flex-direction: row;
-        position: absolute;
+        position: fixed;
         background-color: transparent;
     }
 
