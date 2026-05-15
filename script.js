@@ -512,6 +512,10 @@ function handleCheckout() {
         showToast(`Order Placed!`);
 
         setTimeout(() => {
+            const modal =
+                document.getElementById("order-modal");
+
+            modal.classList.add("show");
 
             /*alert("Order placed successfully!");
             showToast(`Order Placed!`);*/
@@ -527,6 +531,6 @@ function handleCheckout() {
             // Redirect
             window.location.href = "index.html";
 
-        }, 1200);
+        }, 3000);
     });
 }
