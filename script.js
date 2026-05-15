@@ -508,11 +508,13 @@ function handleCheckout() {
         }
 
         // ===== PROCESS ORDER =====
-        alert("Processing your order...");
+        /*alert("Processing your order...");*/
+        showToast(`Order Placed!`);
 
         setTimeout(() => {
 
-            alert("Order placed successfully!");
+            /*alert("Order placed successfully!");
+            showToast(`Order Placed!`);*/
 
             // Clear cart
             cart = [];

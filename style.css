@@ -121,8 +121,9 @@ body {
 
 /* Logo */
 .logo {
+    font-family: 'Exo 2', sans-serif;
     color: rgb(0, 0, 0);
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -605,7 +606,7 @@ h4 {
     border-radius: 15px;
     border: 1px solid #1f1a11;
     box-shadow: #00000080 2px 4px 8px;*/
-    color: #ffffff;
+    color: #000000;
     padding: 20px 20px;
     opacity: 0;
     /*transition: opacity 0.3s ease-in-out;*/
@@ -964,6 +965,7 @@ CART PAGE STYLES
     vertical-align: middle;
     padding: 100px 100px 100px 100px;
     background: #d6cec1;
+    background-size:contain;
     color: #292319;
 }
 
@@ -990,7 +992,8 @@ CART PAGE STYLES
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 8px;
-    border: 1px solid #292319;
+    border: 1px solid #d6cec1;
+    box-shadow: #00000080 2px 4px 1px;
 }
 
 .checkout-form h2 {
