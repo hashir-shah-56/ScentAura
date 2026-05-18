@@ -360,7 +360,6 @@ function renderCart() {
                  </div>
                 <div class="cart-item-details">
                     <h4>${item.name}</h4>
-                    <p>Rs. ${item.price}</p>
                     <p>${item.description}</p>
                 </div>
 
@@ -511,7 +510,6 @@ function handleCheckout() {
 
         // ===== PROCESS ORDER =====
         /*alert("Processing your order...");*/
-        showToast(`Order Placed!`);
 
         setTimeout(() => {
             const modal =
@@ -533,6 +531,6 @@ function handleCheckout() {
             // Redirect
             window.location.href = "index.html";
 
-        }, 3000);
+        }, 4000);
     });
 }
