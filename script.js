@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    
+
     // ===== SEARCH TOGGLE =====
     if (searchIcon && searchBox && searchInput) {
         // ===== GLOBAL SEARCH REDIRECT =====
@@ -419,7 +421,95 @@ function removeFromCart(index) {
     }
 }
 
+// ===================================================
+// ACCOUNT PAGE
+// ===================================================
+document.addEventListener("DOMContentLoaded", () => {
 
+    const form = document.getElementById("login-form");
+    const toggle = document.getElementById("toggle-form");
+    const submitBtn = document.querySelector(".account-btn");
+    const usernameField = document.querySelector(".signup-field");
+
+    let isLogin = true;
+
+    // default state = login
+    if (usernameField) usernameField.style.display = "none";
+
+    // toggle login/signup
+    toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        isLogin = !isLogin;
+
+        if (isLogin) {
+            submitBtn.textContent = "Login";
+            toggle.textContent = "Create Account";
+            usernameField.style.display = "none";
+        } else {
+            submitBtn.textContent = "Create Account";
+            toggle.textContent = "Back to Login";
+            usernameField.style.display = "flex";
+        }
+    });
+
+    // form submit
+form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = document.querySelector('input[type="email"]').value.trim();
+        const password = document.querySelector('input[type="password"]').value.trim();
+        const username = document.getElementById("username")?.value.trim();
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        if (isLogin) {
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (!user) {
+                alert("Invalid login details");
+                return;
+            }
+
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+            alert("Login successful!");
+
+        } else {
+
+            if (!username || !email || !password) {
+                alert("Please fill all fields");
+                return;
+            }
+
+            const exists = users.some(u => u.email === email);
+
+            if (exists) {
+                alert("Account already exists");
+                return;
+            }
+
+            users.push({
+                username,
+                email,
+                password
+            });
+
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Account created successfully!");
+
+            // switch back to login
+            isLogin = true;
+            submitBtn.textContent = "Login";
+            toggle.textContent = "Create Account";
+            usernameField.style.display = "none";
+
+            form.reset();
+        }
+    });
+});
 // ===================================================
 // CHECKOUT PAGE
 // ===================================================
